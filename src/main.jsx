@@ -7,17 +7,17 @@ import Bag from "./routes/bag.jsx";
 import HomeLand from "./Home.jsx";
 import { Provider } from "react-redux";
 import myntraStore from "./store/index.js";
+import FrontPage from "./components/frontPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <HomeLand></HomeLand> },
-      {
-        path: "/bag",
-        element: <Bag />,
-      },
+      // Move the route for the new component to the top
+      { path: "/", element: <FrontPage /> },
+      { path: "/home", element: <HomeLand /> }, // You may need to adjust the path
+      { path: "/bag", element: <Bag /> },
     ],
   },
 ]);
