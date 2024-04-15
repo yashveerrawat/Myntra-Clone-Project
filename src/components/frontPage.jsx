@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 
+import DiscountButton from "../components/floatingBtn";
+
 const FrontPage = () => {
   return (
     <>
+      <DiscountButton></DiscountButton>
       <main>
         <Link to="/home">
           <div className="banner_containerNEW">

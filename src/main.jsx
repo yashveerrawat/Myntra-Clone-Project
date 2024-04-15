@@ -14,9 +14,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      // Move the route for the new component to the top
       { path: "/", element: <FrontPage /> },
-      { path: "/home", element: <HomeLand /> }, // You may need to adjust the path
+      { path: "/home", element: <HomeLand /> },
       { path: "/bag", element: <Bag /> },
     ],
   },

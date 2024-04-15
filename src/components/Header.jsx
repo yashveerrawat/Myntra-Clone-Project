@@ -1,6 +1,7 @@
 import { IoPersonSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
-import { IoBagHandle } from "react-icons/io5";
+import { FaBagShopping } from "react-icons/fa6";
+
 import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
@@ -46,12 +47,13 @@ const Header = () => {
 
           <span className="action_name">Wishlist</span>
         </div>
-        <Link className="action_container" to="/bag">
-          <IoBagHandle />
-
-          <span className="action_name">Bag</span>
-          <span className="bag-item-count">{bag.length}</span>
-        </Link>
+        <div className="action_container">
+          <Link className="action_container" to="/bag">
+            <FaBagShopping />
+            <span className="action_name">Bag</span>
+            <span className="bag-item-count">{bag.length}</span>
+          </Link>
+        </div>
       </div>
     </header>
   );
